@@ -1,0 +1,37 @@
+﻿<html>
+<head>
+	<style>
+body{
+      background-color: white;
+  font-family: 'Helvetica Neue', Hiragino Sans GB;
+}
+  .form{margin:auto;border: 1px solid #270644;width: 360px;-moz-border-radius: 20px;-webkit-border-radius: 20px;background: -moz-linear-gradient(19% 75% 90deg,#4E0085, #963AD6);background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#963AD6), to(#4E0085));margin: 50px auto;padding: 20px;}
+  .raised{margin:auto;width:250px;-webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.1) inset;-moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;border-radius: 10px;
+      }
+      </style>
+</head>
+<body>
+	<div class="raised">
+		<h1 align="center">有个图书馆</h1>
+	</div>
+<div align="center">
+  <form action="/search/" method="get" class="form1">
+    <p align="center">按作者名字搜索</p>
+    <input name="Author">
+    <input type="submit" value="搜索">
+  </form>
+</div>
+<div>
+    {% if errors %}
+        {% for error in errors %}
+        <p style="color: red;">{{error}}</p>
+        {% endfor %}
+    {% endif %}
+ </div>
+<p>
+<fieldset>
+<legend align="center">@Copyright<br/>1130310305杨志鹏</legend>
+</fieldset>
+</p>
+</body>
+</html>

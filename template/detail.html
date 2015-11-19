@@ -1,0 +1,46 @@
+﻿<html>
+<head>
+  <style>
+    body{
+      background-color: #97ffff;
+  font-family: 'Helvetica Neue', Hiragino Sans GB;
+}
+    h1{
+      color : #cd1076;
+    }
+    th{color:white;}
+    td{color:white;}
+    .raised{margin:auto;background-color : #ededed ;width:480px;-webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.1) inset;-moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;border-radius: 10px;}
+    .form1{font-size:24px;margin:auto;border: 1px solid #270644;width: 480px;-moz-border-radius: 20px;-webkit-border-radius: 20px;background: -moz-linear-gradient(19% 75% 90deg,#4E0085, #963AD6);background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#963AD6), to(#4E0085));margin: 50px auto;padding: 20px;}
+    .form2{border: 1px solid #270644;width: 1080px;-moz-border-radius: 20px;-webkit-border-radius: 20px;background: -moz-linear-gradient(19% 75% 90deg,#4E0085, #963AD6);background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#963AD6), to(#4E0085));margin: 50px auto;padding: 20px;}
+    .form3{border: 1px solid #270644;width: 640px;-moz-border-radius: 20px;-webkit-border-radius: 20px;background: -moz-linear-gradient(19% 75% 90deg,#4E0085, #963AD6);background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#963AD6), to(#4E0085));margin: 50px auto;padding: 20px;}
+  </style>
+<body>
+<div  class="raised">
+  <h1 align="center">您所查询的图书</h1>
+</div>
+
+<form class="form3">
+<table border=1 align="center">
+ <tr>
+  <th>书名</th><th>作者</th><th>印刷商</th><th>印刷时间</th><th>价格</th><th>作者年龄</th><th>作者国家</th>
+ </tr>
+ <tr>
+  <td>{{ ibook.Title }}</td>
+  <td>{{ author.Name}}</td>
+  <td>{{ ibook.Publisher }}</td>
+  <td>{{ ibook.PublishDate }}</td>
+  <td>{{ ibook.Price }}</td>
+  <td>{{ author.Age }}</td>
+  <td>{{ author.Country }}</td>
+ </tr>
+
+</table>
+</form>
+<p>
+<fieldset>
+<legend align="center">@Copyright<br/>1130310305杨志鹏</legend>
+</fieldset>
+</p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<html>
+<head>
+  <style>
+  body{
+      background-color: white;
+  font-family: 'Helvetica Neue', Hiragino Sans GB;
+}
+  .form{margin:auto;border: 1px solid #270644;width: 1080px;-moz-border-radius: 20px;-webkit-border-radius: 20px;background: -moz-linear-gradient(19% 75% 90deg,#4E0085, #963AD6);background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#963AD6), to(#4E0085));margin: 50px auto;padding: 20px;}
+  .raised{margin:auto;width:250px;-webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.1) inset;-moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;border-radius: 10px;
+      }
+     h1{
+      color : black;
+    }
+    th{color:white;}
+    td{color:white;}
+  </style>
+</head>
+<body>
+	<div class="raised" align="center">
+		<h1 align="center">您对{{query}}的搜寻结果</h1>
+	</div>
+<form method="get" class="form">
+<table border=1 align="center">
+ <tr>
+  <th>书籍名称</th><th>删除</th>
+ </tr>
+{% for book in books %}
+ <tr>
+  <td><a href="/detail/?id1={{book.ISBN}}">{{book.Title}}</a></td>
+  <td><a href="/delete/?id1={{book.ISBN}}"><input type="button" value="删除"></input></a></td>
+ </tr>
+{% endfor %}
+</table>
+</form>
+<p align="center"><a href="http://127.0.0.1:8000/"><input type="button" value="返回继续查询"></input></a></p>
+<p>
+<fieldset>
+<legend align="center">@Copyright<br/>1130310305杨志鹏project2</legend>
+</fieldset>
+</p>
+</body>
+</html>
